@@ -172,14 +172,16 @@ function AgregarProductosAlCarrito(idProducto)
 }
   
 
-function manejarClicComprar(evento)
-{
-  if (evento.target.classList.contains("btn-comprar"))
-  {
-    const productoId= evento.target.dataset.id;
-    AgregarProductosAlCarrito(productoId);
-  }
-    
+function manejarClicComprar(evento) {
+    if (evento.target.classList.contains("btn-comprar")) {
+        const botonComprar = evento.target; 
+        const productoId = botonComprar.dataset.id;
+        botonComprar.classList.add('clicked');
+        AgregarProductosAlCarrito(productoId);
+        setTimeout(() => {
+            botonComprar.classList.remove('clicked');
+        }, 150);
+    }
 }
 function sumarCantidadProducto(idProducto) {
     let productoEnCarrito = null;

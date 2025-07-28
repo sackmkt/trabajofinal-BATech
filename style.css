@@ -151,32 +151,50 @@ padding: 2%;
 
 form {
     display: flex;
-    height: 10rem;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 1rem; 
+    height: auto; 
 }
 
 .contacto {
-    padding: 3rem 2rem;
+    padding: 3rem 1rem; 
     margin-top: 2rem;
     border-top: 2px solid rgb(224, 224, 224);
-    position: relative; 
-    z-index: 1; 
+    position: relative;
+    z-index: 1;
+    text-align: center; 
 }
 
 
 .contacto label,
-input,
-button {
-    align-content: center;
-    margin: 2px;
+.contacto input,
+.contacto button,
+.contacto textarea { 
+    width: 90%; 
+    max-width: 400px; 
+    padding: 10px; 
+    margin: 8px 0; 
+    border-radius: 1%  rgb(224, 224, 224);
+    box-sizing: border-box; 
+    font-size: 1rem; 
+}
+
+.contacto button {
+    background-color: #bdbdbd;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 15px; 
 }
 
 
 .contacto h2 {
-    text-align: start;
-    font-size: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
     color: rgb(54, 54, 54);
+    margin-bottom: 2rem;
 }
 
 .resenias {
@@ -329,33 +347,48 @@ button {
     margin: 2rem auto 0;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 2rem;
-    max-width: 500px;
-    min-width: 400px;
+    padding: 1.5rem; 
+    max-width: 90%; 
+    min-width: unset; 
     background-color: #f9f9f9;
     color: rgb(54, 54, 54);
+    box-sizing: border-box; 
 }
 
 .carritoCompras h2 {
-    color:rgb(54, 54, 54);
+    color: rgb(54, 54, 54);
     margin-top: 0;
+    font-size: 1.5rem;
 }
 
 .lista-carrito li {
     display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
     gap: 5px;
-    align-items: center;
-    margin-bottom: 5px;
-    padding-right: 5px;
+    margin-bottom: 10px; 
+    padding-bottom: 5px; 
+    border-bottom: 1px dashed #eee; 
+}
+
+.lista-carrito li span {
+    text-align: left;
+    width: 100%; 
+}
+
+.lista-carrito li div {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px; 
 }
 
 .lista-carrito button {
-    margin-left: 5px;
-    padding: 3px 8px;
+    padding: 8px 12px; 
     cursor: pointer;
     border: 1px solid #ccc;
     border-radius: 3px;
     background-color: #f0f0f0;
+    font-size: 0.9rem; 
 }
 
 .lista-carrito button {
@@ -364,18 +397,33 @@ button {
     border-color: #dc3545;
 }
 
+.lista-carrito button.btn-eliminar { 
+    background-color: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
 .total-carrito,
 .cantidad-carrito {
     font-weight: bold;
-    margin-top: 10px;
-    padding-top: 10px;
+    margin-top: 15px; 
+    padding-top: 15px; 
     border-top: 1px solid #eee;
-} 
+    font-size: 1.1rem; 
+}
 
 .lista-carrito .btn-cantidad {
  background-color: #fdfdfd;
  border: solid 1px #bdbdbd;
  color: #6e6e6e ;
+}
+
+.btn-comprar.clicked {
+    transform: scale(0.98); 
+    background-color: #a0a0a0; 
+    border-color: #a0a0a0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); 
+    transition: all 0.1s ease-out; 
 }
 
 @media (max-width: 767px) {
@@ -421,7 +469,8 @@ button {
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 768px) 
+{
     .hamburger-menu {
         display: none; 
     }
@@ -436,5 +485,66 @@ button {
         padding: 10px 25px;
         margin-right: 4rem;
         box-shadow: none; 
+    }
+
+@media (min-width: 768px) {
+  
+    .carritoCompras {
+        padding: 2rem; 
+        max-width: 500px; 
+        min-width: 400px; 
+    }
+
+    .carritoCompras h2 {
+        font-size: 2rem; 
+    }
+
+    .lista-carrito li {
+        flex-direction: row; 
+        align-items: center;
+        margin-bottom: 5px;
+        padding-right: 5px;
+        border-bottom: none; 
+    }
+
+    .lista-carrito button {
+        padding: 3px 8px; 
+        font-size: medium;
+    }
+
+    .total-carrito,
+    .cantidad-carrito {
+        margin-top: 10px;
+        padding-top: 10px;
+        font-size: inherit; 
+    }
+}
+
+ form {
+        height: 10rem; 
+        align-items: center; 
+        padding: 0; 
+    }
+    
+    .contacto {
+        padding: 3rem 2rem; 
+        text-align: start;
+    }
+
+    .contacto label,
+    .contacto input,
+    .contacto button,
+    .contacto textarea {
+        align-content: center; 
+        margin: 2px; 
+        width: auto; 
+        max-width: unset; 
+        padding: inherit; 
+        font-size: inherit; 
+    }
+
+    .contacto h2 {
+        text-align: start; 
+        font-size: 2rem;
     }
 }
