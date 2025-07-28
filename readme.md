@@ -1,0 +1,5 @@
+En esta ocacion para el primer manejo de estos medios para la creacion de interfaces y manejo de aplicacion web, voy a realizar una pagina de la empresa donde trabajo, donde se dedica a la venta e instalacion de productos dedicados a la climatizacion, para poder empezar a entender algo del funcionamiento y estructura de una pagina web y el diseño de la misma
+
+El proyecto que quiero crear en un futuro con el manejo mas avanzado de html css y javascrip es para el control y manejo de facturacion de pacientes y obras sociales para el trabajo de mi esposa. 
+Mientras tanto, lo estamos haciendo para poder controlarlo, con excel, pero le resulta muy dificil a ella. 
+Por eso quiero quiero realizarle una aplicacion web, con el servidor local,  para poder hacer un control de facturas creadas a tal cliente y obra social y asi tener un control de que se facturo, que se pago y que tiene como pendiente de pago para estar al dia y poder reclamar faltantes de pago, en caso de serlo asi.
